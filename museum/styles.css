@@ -178,6 +178,7 @@ li {
 }
 .virtyal__cards {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .virtyal__img {
