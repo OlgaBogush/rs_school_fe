@@ -8,6 +8,9 @@ header {
     height: 200px;
     background: #030303;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .container {
     width: 100%;
@@ -28,7 +31,7 @@ header {
     background-size: 50px 34px;
     width: 195px;
 }
-h1 {
+.header__text {
     font-family: Forum;
     font-style: normal;
     font-weight: normal;
@@ -38,6 +41,11 @@ h1 {
     text-transform: uppercase;
     text-align: right;
     color: #FFFFFF;
+
+    transition: color .1s linear;
+}
+.header__text:hover {
+    color: #9D8665;
 }
 nav {
     max-width: 720px;
@@ -62,12 +70,17 @@ li {
     line-height: 50px;
     letter-spacing: 2px;
     color: #FFFFFF;
+
+    transition: color .1s linear;
 }
 .nav__link-1 {
     padding-left: 0;
 }
 .nav__link-2 {
     padding-right: 0;
+}
+.nav__link:hover {
+    color: #9D8665;
 }
 .welcome {
     display: flex;
@@ -250,6 +263,8 @@ span {
     width: 1440px;
     height: 629px;
 }
+
+
 .video__title {
     display: flex;
     justify-content: space-between;
@@ -290,8 +305,10 @@ span {
     justify-content: space-between;
     align-items: flex-start;
     width: 50%;
+    padding-left: 60px;
 }
 .tickets__title {
+    margin-top: 0;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -299,6 +316,7 @@ span {
     line-height: 33px;
     color: #FFFFFF;
 }
+
 .amount {
     display: flex;
     flex-direction: column;
@@ -310,12 +328,32 @@ span {
     width: 3em;
     text-align: center;
   }
-.tickets__text, .number, .tickets__btn {
+.tickets__text {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
+    color: #FFFFFF;
+}
+.tickets__btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.number {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+
     color: #FFFFFF;
 }
 .t__btn {
@@ -350,8 +388,14 @@ span {
     background: #FFFFFF;
     border-radius: 2px;
     border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
     text-align: center;
     letter-spacing: 2px;
+    cursor: pointer;
 
     color: #000000;
 }
