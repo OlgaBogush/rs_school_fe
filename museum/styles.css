@@ -5,7 +5,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1920px;
     height: 200px;
     background: #030303;
 }
@@ -71,20 +70,23 @@ li {
     padding-right: 0;
 }
 .welcome {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 246px;
     background: #030303;
-    max-width: 1920px;
     height: 750px;
     background-image: url("assets/img/background.jpg");
     background-repeat: no-repeat;
     background-position: calc(50% + 352px) 100%;
     background-size: 1215px 750px;
-    padding-top: 114px;
 }
 .welcome__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 /* h1, h2 */
@@ -108,6 +110,12 @@ li {
     height: 3px;
     background-color: #710707;
 }
+.section-title-welc {
+    margin-bottom: 0;
+}
+.section-title-r-pict {
+    margin-top: 0;
+}
 
 .underline-title {
     position: relative;
@@ -120,7 +128,7 @@ li {
     text-transform: uppercase;
     color: #9D8665;
   }
-  .underline-title::after {
+  .underline-title-r::after {
     content: "";
     position: absolute;
     bottom: -25px;
@@ -129,12 +137,13 @@ li {
     height: 3px;
     background-color: #710707;
   }
-  .underline-title-small {
+
+  .underline-title-r-small {
     font-size: 32px;
     line-height: 35px;
     color: #000000;
   }
-  .underline-title-small::after {
+  .underline-title-r-small::after {
     width: calc(100% - 140px);
     height: 2px;
     bottom: -9px;
@@ -173,9 +182,6 @@ li {
 }
 
 
-.virtyal {
-    max-width: 1920px;
-}
 .virtyal__cards {
     display: flex;
     justify-content: space-between;
@@ -207,13 +213,17 @@ li {
 
 .picture {
     background: #030303;
-    max-width: 1920px;
     height: 865px;
+    padding-top: 90px;
+    margin-top: 70px;
 }
 .picture__inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+}
+.picture__list, .picture__photo {
+    width: calc(50% - 30px);
 }
 .picture__text {
     font-family: Roboto;
@@ -223,33 +233,23 @@ li {
     line-height: 38px;
     color: #FFFFFF;
 }
-.picture__photo {
-    width: 720px;
-    height: 700px;
-}
+
 span {
     color: #CAAA7D;
 }
 
+
 .video {
-    max-width: 1920px;
+    margin: 90px 0 75px 0;
 }
-.video__img {
-    width: 1410px;
-    height: 629px;
-}
-.video__black {
-    width: 1410px;
-    height: 85px;
-    background-color: #000000;
-}
-.ideo__player, .video__inner {
+.video__screen {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("assets/video/Rectangle.jpg");
+    width: 1440px;
+    height: 629px;
 }
-
 .video__title {
     display: flex;
     justify-content: space-between;
@@ -266,6 +266,96 @@ span {
     line-height: 38px;
     color: #000000;
 }
+
+
+
+.tickets {
+    height: 893px;
+    background: #030303;
+}
+.tickets__intro {
+    padding-top: 75px;
+}
+.tickets__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 103px;
+}
+.tickets__img {
+    width: 50%;
+}
+.tickets__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+}
+.tickets__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+.amount {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: flex-end;
+}
+.number {
+    all: unset;
+    width: 3em;
+    text-align: center;
+  }
+.tickets__text, .number, .tickets__btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.t__btn {
+    padding: 10px;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.rectangle {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 0px;
+}
+
+.tickets__btn {
+    width: 175px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    border: 0;
+    text-align: center;
+    letter-spacing: 2px;
+
+    color: #000000;
+}
+
 
 
 
